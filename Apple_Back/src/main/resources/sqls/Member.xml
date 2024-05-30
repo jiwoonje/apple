@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.phoneShopping.member.dao.MemberDao">	
+ 
+<select id="findAllMember" resultType="com.example.phoneShopping.member.domain.Member">
+SELECT * FROM MEMBER
+</select>
+
+
+<select id="findByIdMember" parameterType="String" resultType="com.example.phoneShopping.member.domain.Member">
+SELECT * FROM MEMBER WHERE memId=#{memId}
+</select>
+
+
+<select id="findByIdSeq" parameterType="Integer" resultType="Integer">
+SELECT mem_seq FROM MEMBER WHERE memSeq=#{memSeq}
+</select>
+
+
+<select id="findByPw" parameterType="String" resultType="String">
+SELECT mem_pw FROM MEMBER WHERE memId=#{memId}
+</select>
+
+
+<insert id="createMember" parameterType="com.example.phoneShopping.member.dto.param.CreateMemberParam">
+INSERT INTO MEMBER(memId, memPw) VALUES(#{memId}, #{memPw})
+</insert>
+
+
+<update id="updateMember" parameterType="com.example.phoneShopping.member.dto.param.UpdateMemberParam">
+UPDATE MEMBER SET memPw=#{memPw} WHERE memId=#{memId}
+</update>
+
+
+<delete id="deleteMember" parameterType="com.example.phoneShopping.member.domain.Member">
+DELETE FROM MEMBER WHERE memId=#{memId}
+</delete>
+
+
+<select id="isExistUserId" parameterType="String" resultType="java.lang.Integer">
+SELECT count(*) FROM member	WHERE memId=#{memId}
+</select>
+
+</mapper>

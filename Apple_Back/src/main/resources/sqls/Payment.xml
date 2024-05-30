@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.phoneShopping.payment.dao.PaymentDao">
+
+<select id="findAllPayment" resultType="com.example.phoneShopping.payment.domain.Payment">
+SELECT * FROM PAYMENT
+</select>
+
+
+<select id="findByIdPayment" parameterType="Integer" resultType="com.example.phoneShopping.payment.domain.Payment">
+SELECT * FROM PAYMENT WHERE paySeq=#{paySeq}
+</select>
+
+
+<insert id="createPayment" parameterType="com.example.phoneShopping.payment.dto.param.CreatePaymentParam">
+INSERT INTO PAYMENT(memSeq, payDate, payStatus) VALUES(#{memSeq}, #{payDate}, #{payStatus})
+</insert>
+
+
+<update id="updatePayment" parameterType="com.example.phoneShopping.payment.dto.param.UpdatePaymentParam">
+UPDATE PAYMENT SET memSeq=#{memSeq}, payDate=#{payDate}, payStatus=#{payStatus} WHERE paySeq=#{paySeq}
+</update>
+
+
+<delete id="deletePayment" parameterType="com.example.phoneShopping.payment.domain.Payment">
+DELETE FROM PAYMENT WHERE paySeq=#{paySeq}
+</delete>
+
+
+<select id="findAllPaymentProduct" resultType="com.example.phoneShopping.payment.domain.PaymentProduct">
+SELECT * FROM PAYMENTPRODUCT
+</select>
+
+
+<select id="findByIdPaymentProduct" parameterType="Integer" resultType="com.example.phoneShopping.payment.domain.PaymentProduct">
+SELECT * FROM PAYMENTPRODUCT WHERE payiSeq=#{payiSeq}
+</select>
+
+
+<insert id="createPaymentProduct" parameterType="com.example.phoneShopping.payment.dto.param.CreatePaymentProductParam">
+INSERT INTO PAYMENTPRODUCT(paySeq, prodSeq, payiPrice, payiCnt) VALUES(#{paySeq}, #{prodSeq}, #{payiPrice}, #{payiCount})
+</insert>
+
+
+<update id="updatePaymentProduct" parameterType="com.example.phoneShopping.payment.dto.param.UpdatePaymentProductParam">
+UPDATE PAYMENTPRODUCT SET paySeq=#{paySeq}, prodSeq=#{prodSeq}, payiPrice=#{payiPrice}, payiCnt=#{payiCount} WHERE payiSeq=#{payiSeq}
+</update>
+
+
+<delete id="deletePaymentProduct" parameterType="com.example.phoneShopping.payment.domain.PaymentProduct">
+DELETE FROM PAYMENTPRODUCT WHERE payiSeq=#{payiSeq}
+</delete>
+
+
+</mapper>

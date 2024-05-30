@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.phoneShopping.product.dao.ColorDao">	
+ 
+<select id="findAllColor" resultType="com.example.phoneShopping.product.domain.Color">
+SELECT * FROM COLOR
+</select>
+
+
+<select id="findByIdColor" parameterType="Integer" resultType="com.example.phoneShopping.product.domain.Color">
+SELECT * FROM COLOR WHERE colorSeq=#{colorSeq}
+</select>
+
+
+<insert id="createColor" parameterType="com.example.phoneShopping.product.dto.param.CreateColorParam">
+INSERT INTO COLOR(color) VALUES(#{color})
+</insert>
+
+
+<update id="updateColor" parameterType="com.example.phoneShopping.product.dto.param.UpdateColorParam">
+UPDATE COLOR SET color=#{color} WHERE colorSeq=#{colorSeq}
+</update>
+
+
+<delete id="deleteColor" parameterType="com.example.phoneShopping.product.domain.Color">
+DELETE FROM COLOR WHERE colorSeq=#{colorSeq}
+</delete>
+
+
+
+</mapper>

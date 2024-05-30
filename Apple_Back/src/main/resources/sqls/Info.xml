@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.phoneShopping.member.dao.InfoDao">
+
+
+<select id="findAllInfo" resultType="com.example.phoneShopping.member.domain.Info">
+SELECT * FROM INFO;
+</select>
+
+
+<select id="findByIdInfo" parameterType="Integer" resultType="com.example.phoneShopping.member.domain.Info">
+SELECT * FROM INFO WHERE infoSeq=#{infoSeq}
+</select>
+
+
+<insert id="createInfo" parameterType="com.example.phoneShopping.member.dto.param.CreateInfoParam">
+INSERT INTO INFO(infoName, infoBirth, infoGender, infoPhone) VALUES(#{infoName}, #{infoBirth}, #{infoGender}, #{infoPhone})
+</insert>
+
+
+<update id="updateInfo" parameterType="com.example.phoneShopping.member.dto.param.UpdateInfoParam">
+UPDATE INFO SET infoName=#{infoName}, infoBirth=#{infoBirth}, infoGender=#{infoGender}, infoPhone=#{infoPhone} WHERE infoSeq=#{infoSeq}
+</update>
+
+
+<delete id="deleteInfo" parameterType="com.example.phoneShopping.member.domain.Member">
+DELETE FROM INFO WHERE infoSeq=#{infoSeq}
+</delete>
+
+
+</mapper>

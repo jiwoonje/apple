@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.phoneShopping.cart.dao.CartDao">
+
+<select id="findAllCart" resultType="com.example.phoneShopping.cart.domain.Cart">
+SELECT * FROM CART
+</select>
+
+
+<select id="findByIdCart" parameterType="Integer" resultType="com.example.phoneShopping.cart.domain.Cart">
+SELECT * FROM CART WHERE cartSeq=#{cartSeq}
+</select>
+
+
+<insert id="createCart" parameterType="com.example.phoneShopping.cart.dto.param.CreateCartParam">
+INSERT INTO CART(memSeq) VALUES(#{memSeq})
+</insert>
+
+
+<update id="updateCart" parameterType="com.example.phoneShopping.cart.dto.param.UpdateCartParam">
+UPDATE CART SET memSeq=#{memSeq} WHERE cartSeq=#{cartSeq}
+</update>
+
+
+<delete id="deleteCart" parameterType="com.example.phoneShopping.cart.domain.Cart">
+DELETE FROM CART WHERE cartSeq=#{cartSeq}
+</delete>
+
+
+<select id="findAllCartProduct" resultType="com.example.phoneShopping.cart.domain.CartProduct">
+SELECT * FROM CARTPRODUCT
+</select>
+
+
+<select id="findByIdCartProduct" parameterType="Integer" resultType="com.example.phoneShopping.cart.domain.CartProduct">
+SELECT * FROM CARTPRODUCT WHERE cartpSeq=#{cartpSeq}
+</select>
+
+
+<insert id="createCartProduct" parameterType="com.example.phoneShopping.cart.dto.param.CreateCartProductParam">
+INSERT INTO CARTPRODUCT(cartSeq, prodSeq, cartpCnt) VALUES(#{cartSeq}, #{prodSeq}, #{cartpCnt})
+</insert>
+
+
+<update id="updateCartProduct" parameterType="com.example.phoneShopping.cart.dto.param.UpdateCartProductParam">
+UPDATE CARTPRODUCT SET cartSeq=#{cartSeq}, prodSeq=#{prodSeq}, cartpCnt=#{cartpCnt} WHERE cartpSeq=#{cartpSeq}
+</update>
+
+
+<delete id="deleteCartProduct" parameterType="com.example.phoneShopping.cart.domain.CartProduct">
+DELETE FROM CARTPRODUCT WHERE cartpSeq=#{cartpSeq}
+</delete>
+
+
+</mapper>

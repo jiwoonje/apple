@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "Apple SD Gothic Neo M";
+    font-style: normal;
+    font-weight: normal;
+    src: url("./AppleSDGothicNeoM.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Apple SD Gothic Neo EB";
+    font-style: normal;
+    font-weight: bold;
+    src: url("./AppleSDGothicNeoEB.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Apple SD Gothic Neo H";
+    font-style: normal;
+    font-weight: bolder;
+    src: url("./AppleSDGothicNeoH.woff") format("woff");
+}

@@ -1,0 +1,168 @@
+.unvisible {
+    visibility: hidden;
+}
+
+.payment_part, .payment_success_part{
+    margin-top: 90px;
+}
+
+.payment_part_title {
+    padding-bottom: 20px;
+}
+
+.payment_title {
+    font-size: 70px !important;
+    font-family: "Apple SD Gothic Neo EB";
+    display: inline;
+    margin-bottom: 0;
+}
+
+.payment_part_img {
+    width: 30%;
+    height: 190px;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    position: relative;
+    
+}
+
+.payment_part_img > img {
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.payment_part1 {
+    padding: 30px;
+}
+
+.payment_part1 {
+    width: 70%;
+    height: 230px;
+    display: inline-block;
+    padding: 30px 30px 30px 10px;
+}
+
+.payment_part1_title {
+    font-size: 30px !important;
+    font-family: "Apple SD Gothic Neo EB";
+    display: inline;
+}
+
+.payment_part1_subtitle {
+    font-size: 18px;
+    font-family: "Apple SD Gothic Neo EB";
+    display: inline;
+    padding-top: 5px;
+}
+
+.payment_part1_1 {
+    font-size: 18px;
+    font-family: "Apple SD Gothic Neo EB";
+    margin-bottom: 0px;
+}
+
+.payment_part1_2 {
+    font-size: 16px;
+    font-family: "Apple SD Gothic Neo M";
+    padding-top: 5px;
+}
+
+.payment_part2 {
+    width: 32%;
+    margin: 5px;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.payment_part2_title {
+    font-size: 23px !important;
+    font-family: "Apple SD Gothic Neo EB";
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.payment_part2_table {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.payment_part2_th {
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    text-align: center;
+    padding: 10px;
+}
+
+.payment_part2_td {
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 10px;
+}
+
+.payment_form {
+    width: 100%;
+    height: 24px;
+    border: 1px solid #dbdbdb;
+    border-radius: 10px;
+    padding: 6px;
+}
+
+.payment_part3 {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.payment_part3_1 {
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+.payment_part3_2 {
+    text-align: right;    
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.payment_total_title {
+    font-size: 35px !important;
+    font-family: "Apple SD Gothic Neo EB";
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.payment_total_price {
+    font-size: 30px !important;
+    font-family: "Apple SD Gothic Neo EB";
+    margin-bottom: 20px;
+    margin-right: 5px;
+}
+
+.payment_success_title {
+    font-size: 70px !important;
+    font-family: "Apple SD Gothic Neo EB";
+    margin-bottom: 80px;
+}
+
+.payment_success_subtitle {
+    font-size: 40px !important;
+    font-family: "Apple SD Gothic Neo M";
+    margin-bottom: 50px;
+}
+
+.payment_success_detail {
+    font-size: 15px !important;
+    font-family: "Apple SD Gothic Neo M";
+    margin-bottom: 30px;
+    display: inline;
+    margin-right: 10px;
+}
+
+.payment_success_part_1 {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}

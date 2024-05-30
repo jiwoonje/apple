@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.phoneShopping.member.dao.CardDao">
+
+<select id="findAllCard" resultType="com.example.phoneShopping.member.domain.Card">
+SELECT * FROM CARD;
+</select>
+
+
+<select id="findByIdCard" parameterType="int" resultType="com.example.phoneShopping.member.domain.Card">
+SELECT * FROM CARD WHERE cardSeq=#{cardSeq}
+</select>
+
+
+<insert id="createCard" parameterType="com.example.phoneShopping.member.dto.param.CreateCardParam">
+INSERT INTO CARD(cardComp, cardNum, cardDate, cardCvc) VALUES(#{cardComp}, #{cardNum}, #{cardDate}, #{cardCvc})
+</insert>
+
+
+<update id="updateCard" parameterType="com.example.phoneShopping.member.dto.param.UpdateCardParam">
+UPDATE CARD SET cardComp= #{cardComp}, cardNum=#{cardNum}, cardDate=#{cardDate}, cardCvc=#{cardCvc} WHERE cardSeq=#{cardSeq}
+</update>
+
+
+<delete id="deleteCard" parameterType="com.example.phoneShopping.member.domain.Card">
+DELETE FROM CARD WHERE cardSeq=#{cardSeq}
+</delete>
+
+</mapper>

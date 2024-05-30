@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.phoneShopping.product.dao.ProductDao">
+
+<!-- 상품 추가 POST -->
+<insert id="createProduct" parameterType="com.example.phoneShopping.product.dto.param.CreateProductParam">
+insert into product(prodSeq, prodName, prodPrice, prodCnt, hddSeq, colorSeq)
+values(#{prodSeq}, #{prodName}, #{prodPrice}, #{prodCnt}, #{hddSeq}, #{colorSeq})
+</insert>
+
+<!-- 상품 상세 GET -->
+<select id="findByIdProduct" parameterType="String" resultType="com.example.phoneShopping.product.domain.Product">
+select * from product where prodSeq=#{prodSeq}
+</select>
+
+<!-- 상품 목록 GET -->
+<select id="findAllProduct" resultType="com.example.phoneShopping.product.domain.Product">
+select * from product
+</select>
+	
+<!-- 상품 수정 PATCH -->
+<update id="updateProduct" parameterType="com.example.phoneShopping.product.dto.param.UpdateProductParam">
+update product set prodName=#{prodName}, prodPrice=#{prodPrice}, prodCnt=#{prodCnt}, hddSeq=#{hddSeq}, colorSeq=#{colorSeq} where prodSeq=#{prodSeq}
+</update>
+	
+<!-- 상품 삭제 DELETE -->
+<delete id="deleteProduct" parameterType="com.example.phoneShopping.product.domain.Product">
+delete from product where prodSeq=#{prodSeq}
+</delete>
+
+</mapper>

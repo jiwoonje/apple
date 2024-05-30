@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.phoneShopping.member.dao.AddressDao">
+
+<select id="findAllAddress" resultType="com.example.phoneShopping.member.domain.Address">
+SELECT * FROM ADDRESS
+</select>
+
+
+<select id="findByIdAddress" parameterType="Integer" resultType="com.example.phoneShopping.member.domain.Address">
+SELECT * FROM ADDRESS WHERE addrSeq=#{addrSeq}
+</select>
+
+
+<insert id="createAddress" parameterType="com.example.phoneShopping.member.dto.param.CreateAddressParam">
+INSERT INTO ADDRESS(addrZip, addrDetail) VALUES(#{addrZip}, #{addrDetail})
+</insert>
+
+
+<update id="updateAddress" parameterType="com.example.phoneShopping.member.dto.param.UpdateAddressParam">
+UPDATE ADDRESS SET addrZip=#{addrZip}, addrDetail=#{addrDetail} WHERE addrSeq=#{addrSeq}
+</update>
+
+
+<delete id="deleteAddress" parameterType="com.example.phoneShopping.member.domain.Address">
+DELETE FROM ADDRESS WHERE addrSeq=#{addrSeq}
+</delete>
+
+</mapper>

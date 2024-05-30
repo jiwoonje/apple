@@ -1,0 +1,104 @@
+.main {
+    height: auto;
+}
+
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.home1, .home2, .home3 {
+    height: 695px;
+    overflow: hidden;
+}
+
+.home1 > img {
+    position: relative;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.home2 > img {
+    position: relative;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home3 > img {
+    position: relative;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hometext1 {
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hometext2 {
+    position: absolute;
+    top: 865px;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white !important;
+}
+
+.hometext3 {
+    position: absolute;
+    top: 1560px;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.maintitle {
+    font-size: 50px !important;
+    font-family: "Apple SD Gothic Neo EB";
+}
+
+.mainsubtitle {
+    font-size: 23px !important;
+    font-family: "Apple SD Gothic Neo EB";
+}
+
+.homebtn1 {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}
+
+.homebtn2 {
+    position: absolute;
+    top: 945px;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.homebtn3 {
+    position: absolute;
+    top: 1640px;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
